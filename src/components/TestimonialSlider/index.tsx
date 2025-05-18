@@ -31,7 +31,7 @@ const TestimonialSlider = () => {
          <Swiper
             modules={[Pagination, Autoplay]}
             pagination={{ clickable: true }}
-            autoplay={{ delay: 50000 }}
+            autoplay={{ delay: 5000 }}
             loop={true}
          >
             {testimonials.map((t, index) => (
