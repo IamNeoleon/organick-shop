@@ -17,6 +17,9 @@ export default {
       },
     },
     extend: {
+      screens: {
+        xs: '480px',
+      },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
         osans: ['"Open Sans"', 'sans-serif'],

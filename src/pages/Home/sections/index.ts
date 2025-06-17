@@ -1,0 +1,10 @@
+export { default as About } from './About';
+export { default as Intro } from './Intro';
+export { default as Products } from './Products';
+export { default as Promo } from './Promo';
+export { default as Catalog } from './Catalog';
+export { default as Offer } from './Offer';
+export { default as News } from './News';
+export { default as Testimonials } from './Testimonials';
+export { default as PromoEco } from './PromoEco';
+export { default as Newsletter } from './Newsletter';

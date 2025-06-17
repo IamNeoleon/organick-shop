@@ -28,18 +28,6 @@
    }
 
    .text {
-      @apply text-lg font-osans text-darkGrey leading-relaxed font-normal
-   }
-
-   .btn {
-      @apply inline-flex text-xl font-bold rounded-2xl py-6 px-10 cursor-pointer hover:opacity-70 transition-opacity duration-200 max-[425px]:py-4 max-[425px]:text-[16px]
-   }
-
-   .btn-yellow {
-      @apply bg-yellow text-primary
-   }
-
-   .btn-primary {
-      @apply bg-primary text-white
+      @apply text-lg font-osans text-darkGrey leading-relaxed font-normal max-md:text-base
    }
 }
