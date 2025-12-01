@@ -13,7 +13,6 @@ const SearchBlock: React.FC = () => {
    const [localValue, setLocalValue] = useState(searchValue);
    const [visible, setVisible] = useState(false);
    const inputRef = useRef<HTMLInputElement>(null)
-   console.log(location.pathname);
 
    const handleChangeValue = (value: string) => {
       if (location.pathname !== '/shop') {

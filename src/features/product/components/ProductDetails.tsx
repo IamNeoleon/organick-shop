@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Minus, ArrowRight } from 'lucide-react';
+import { Plus, Minus } from 'lucide-react';
 import { TTab } from '../model';
 import { TCartProduct } from '@/features/cart/model'
 import ProductTabs from './ProductTabs';
