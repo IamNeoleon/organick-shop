@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 import { useGetProductsQuery } from '@/features/product/api/productsApi';
 import { TProduct } from '@/features/product/model';
 import { getRandomProducts } from '@/utils';

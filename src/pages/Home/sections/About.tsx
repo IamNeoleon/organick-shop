@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 import aboutImg from '@/assets/images/pages/home/about/01.png';
 import plateIcon from '@/assets/icons/plate.svg';
 import mailboxIcon from '@/assets/icons/mailbox.svg';

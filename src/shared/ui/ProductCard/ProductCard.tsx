@@ -8,7 +8,7 @@ interface IProductCardProps {
    rating: number
 }
 
-const ProductCard: React.FC<IProductCardProps> = ({ name, category, imageUrl, price, rating }) => {
+const ProductCard: React.FC<IProductCardProps> = ({ name, category, imageUrl, price }) => {
    return (
       <>
          <div className='relative p-[30px] bg-lgGrey rounded-[30px]'>
