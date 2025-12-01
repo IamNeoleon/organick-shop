@@ -5,8 +5,24 @@ import { Link } from 'react-router-dom';
 import SearchBlock from '@/features/product/components/SearchBlock';
 import logo from '@/assets/icons/main-logo.svg';
 import { useAppDispatch, useAppSelector } from '@/shared/hooks';
-import { selectCart, setCartFromLs } from '@/features/cart/model';
+import { selectCart, setCartFromLs, TCartProduct } from '@/features/cart/model';
 import { getCartFromLs, saveCartToLs } from '../../utils';
+
+
+const LINKS = [
+	{
+		title: 'Home',
+		url: '/'
+	},
+	{
+		title: 'About',
+		url: '/about'
+	},
+	{
+		title: 'Shop',
+		url: '/shop'
+	},
+]
 
 const Header: React.FC = () => {
 	const dispatch = useAppDispatch()
@@ -14,14 +30,13 @@ const Header: React.FC = () => {
 	const cartCount = cartItems.length;
 	const [isOpenMenu, setIsOpenMenu] = useState(false);
 
-
 	const handleOpenMenu = () => {
 		setIsOpenMenu(prev => !prev)
 		document.querySelector('body')?.classList.toggle('lock')
 	}
 
 	useEffect(() => {
-		const cartFromLs = getCartFromLs();
+		const cartFromLs: TCartProduct[] = getCartFromLs();
 		if (cartItems.length === 0 && cartFromLs.length > 0) {
 			dispatch(setCartFromLs(cartFromLs));
 		}
@@ -34,17 +49,18 @@ const Header: React.FC = () => {
 
 	return (
 		<header className='py-10 max-lg:py-7 max-md:py-4'>
-			<div className="max-w-[1630px] mx-auto px-[15px]">
+			<div className="container">
 				<div className="relative flex justify-between items-center ">
 					<Link to='/' className='max-md:max-w-[150px] max-[375px]:max-w-[120px]'>
 						<img src={logo} alt="header logo" />
 					</Link>
-					<nav className={classNames("transition-left duration-200 max-lg:-left-full max-lg:fixed max-lg:top-0  max-lg:z-10 max-lg:flex-col max-lg:bg-white max-lg:w-full max-lg:h-full max-lg:items-center max-lg:justify-center flex gap-6 relative", { 'max-lg:left-0 overflow-auto': isOpenMenu })}>
-						<Link to='/' className='nav-link underline-hover'>Home</Link>
-						<Link to='/about' className='nav-link underline-hover'>About</Link>
-						<Link to='/shop' className='nav-link underline-hover'>Shop</Link>
-						<Link to='/projects' className='nav-link underline-hover'>Projects</Link>
-						<Link to='/news' className='nav-link underline-hover'>News</Link>
+					<nav className={classNames(
+						"transition-left duration-200 max-lg:-left-full max-lg:fixed max-lg:top-0 max-lg:z-10 max-lg:flex-col max-lg:bg-white max-lg:w-full max-lg:h-full max-lg:items-center max-lg:justify-center flex gap-6 relative",
+						{ 'max-lg:left-0 overflow-auto': isOpenMenu }
+					)}>
+						{
+							LINKS.map((link, idx) => <Link key={idx} to={link.url} className='nav-link underline-hover'>{link.title}</Link>)
+						}
 					</nav>
 					<div className='flex items-center'>
 						<SearchBlock />

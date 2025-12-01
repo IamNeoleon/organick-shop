@@ -58,4 +58,4 @@ const SearchBlock: React.FC = () => {
    );
 };
 
-export default SearchBlock; ``
+export default SearchBlock;

@@ -1,8 +1,8 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 import aboutImg from '@/assets/images/pages/about/about/01.jpg';
 import tractorSvg from '@/assets/icons/tractor.svg';
 import factorySvg from '@/assets/icons/factory.svg';
+import Button from '@/shared/ui/Button/Button';
 
 const AboutSection: React.FC = () => {
    return (
@@ -33,9 +33,7 @@ const AboutSection: React.FC = () => {
                            <span className='text-2xl font-semibold text-primary'>No growth hormones are used</span>
                         </div>
                      </div>
-                     <button className="btn btn-primary flex items-center max-lg:mx-auto">
-                        <span className='mr-4'>Explore More</span> <div className='w-5 h-5 rounded-full bg-[#335b6b] flex justify-center items-center'><ArrowRight width={13} /></div>
-                     </button>
+                     <Button variant='primary' text='Explore More' to='/shop' />
                   </div>
                </div>
             </div>

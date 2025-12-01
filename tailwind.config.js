@@ -1,21 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    './index.html',            // ваш корневой HTML
-    './src/**/*.{ts,tsx,js,jsx}' // все компоненты в src
+    './index.html',
+    './src/**/*.{ts,tsx,js,jsx}'
   ],
   theme: {
-    container: {
-      center: false,
-      padding: '15px',
-      screens: {
-        sm: '100%',
-        md: '100%',
-        lg: '100%',
-        xl: '100%',             // своя ширина контейнера на xl
-        '2xl': '1430px',
-      },
-    },
     extend: {
       screens: {
         xs: '480px',
