@@ -8,6 +8,8 @@ const About = lazy(() => import('@/pages/About/About'));
 const Shop = lazy(() => import('@/pages/Shop/Shop'));
 const ProductPage = lazy(() => import('@/pages/ProductPage/ProductPage'));
 const Cart = lazy(() => import('@/pages/Cart/Cart'));
+const Checkout = lazy(() => import('@/pages/Checkout/Checkout'));
+
 
 export const routes: RouteObject[] = [
    {
@@ -51,6 +53,14 @@ export const routes: RouteObject[] = [
             element: (
                <Suspense fallback={<PageLoader />}>
                   <Cart />
+               </Suspense>
+            ),
+         },
+         {
+            path: 'checkout',
+            element: (
+               <Suspense fallback={<PageLoader />}>
+                  <Checkout />
                </Suspense>
             ),
          },

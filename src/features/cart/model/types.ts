@@ -6,5 +6,4 @@ export type TCartProduct = Omit<TProduct, 'category' | 'description' | 'rating'>
 
 export interface ICartState {
    cartItems: TCartProduct[];
-   cartTotal: number;
 }

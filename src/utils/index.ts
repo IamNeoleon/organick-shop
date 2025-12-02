@@ -31,11 +31,27 @@ export const getRandomProducts = (arr: TProduct[], n: number) => {
 
 export const saveCartToLs = (arr: TCartProduct[]) => {
    if (arr.length > 0) {
-      localStorage.setItem('cart', JSON.stringify(arr));
+      localStorage.setItem('cart_organick', JSON.stringify(arr));
    }
 }
 
 export const getCartFromLs = (): TCartProduct[] => {
-   const data = localStorage.getItem('cart');
+   const data = localStorage.getItem('cart_organick');
    return data ? JSON.parse(data) as TCartProduct[] : [];
+}
+
+export const clearCartFromLs = () => {
+   localStorage.removeItem('cart_organick')
+}
+
+export const calculateCartTotal = (cartItems: TCartProduct[]) => {
+   let sum = 0
+
+   for (let i = 0; i < cartItems.length; i++) {
+      const item = cartItems[i];
+
+      sum += item.price * item.quantity
+   }
+
+   return sum
 }

@@ -10,7 +10,7 @@ const MainLayout: React.FC = () => {
       <>
          <Header />
          <AnimatePresence mode="wait">
-            <main key={location.pathname} className="min-h-screen">
+            <main key={location.pathname}>
                <Outlet />
             </main>
          </AnimatePresence>

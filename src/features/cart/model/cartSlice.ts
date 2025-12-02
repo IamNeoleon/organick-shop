@@ -3,7 +3,6 @@ import { ICartState, TCartProduct } from "./types";
 
 const initialState: ICartState = {
    cartItems: [],
-   cartTotal: 0,
 };
 
 export const cartSlice = createSlice({
@@ -30,9 +29,9 @@ export const cartSlice = createSlice({
          );
          if (item) item.quantity = action.payload.quantity;
       },
-      setCartSum(state, action: PayloadAction<number>) {
-         state.cartTotal = action.payload;
-      },
+      clearCart(state) {
+         state.cartItems = []
+      }
    },
 });
 
@@ -41,7 +40,7 @@ export const {
    onDeleteItem,
    updateCountItem,
    setCartFromLs,
-   setCartSum,
+   clearCart
 } = cartSlice.actions;
 
 export default cartSlice.reducer;
