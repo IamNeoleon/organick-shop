@@ -31,18 +31,20 @@ const CartContainer: React.FC<ICartContainerProps> = () => {
 
    return (
       <>
-         <CartTableHeader />
-         <div>
-            <AnimatePresence>
-               {cartItems?.map(cartItem => (
-                  <CartItem key={cartItem.id} id={cartItem.id} name={cartItem.name} price={cartItem.price} quantity={cartItem.quantity} imageUrl={cartItem.imageUrl} />
-               ))}
-            </AnimatePresence>
-         </div>
-         <div className='pt-9 text-right flex flex-col items-end'>
-            <div className="text-xl font-osans flex items-center justify-end gap-3 mb-1">Subtotal: <span className='text-2xl font-medium'>${cartTotal}</span></div>
-            <div className='text-base italic mb-4'>Taxes and shipping are calculated at checkout</div>
-            <Button text='Go to checkout' variant='primary' to='/checkout' />
+         <div className="container py-8">
+            <CartTableHeader />
+            <div>
+               <AnimatePresence>
+                  {cartItems?.map(cartItem => (
+                     <CartItem key={cartItem.id} id={cartItem.id} name={cartItem.name} price={cartItem.price} quantity={cartItem.quantity} imageUrl={cartItem.imageUrl} />
+                  ))}
+               </AnimatePresence>
+            </div>
+            <div className='pt-9 text-right flex flex-col items-end'>
+               <div className="text-xl font-osans flex items-center justify-end gap-3 mb-1">Subtotal: <span className='text-2xl font-medium'>${cartTotal}</span></div>
+               <div className='text-base italic mb-4'>Taxes and shipping are calculated at checkout</div>
+               <Button text='Go to checkout' variant='primary' to='/checkout' />
+            </div>
          </div>
       </>
    );

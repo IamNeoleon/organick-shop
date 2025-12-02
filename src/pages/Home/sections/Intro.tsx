@@ -17,7 +17,7 @@ const Intro: React.FC = () => {
                      of life <br />
                   </div>
                   {/*  */}
-                  <Button variant='yellow' text='Explore Now' />
+                  <Button variant='yellow' text='Explore Now' to='/shop' />
                </div>
             </div>
          </div>

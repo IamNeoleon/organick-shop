@@ -7,7 +7,7 @@ The application works with a mock API without a real backend. The shopping cart 
 
 ## 🚀 Demo
 
-🔗 https://your-demo-link.com
+🔗 https://organick-woad.vercel.app/
 
 ---
 
