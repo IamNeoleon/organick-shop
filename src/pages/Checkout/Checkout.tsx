@@ -4,7 +4,6 @@ import { CheckoutTotal } from '@/features/checkout/components/CheckoutTotal';
 import { PageWrapper } from '@/shared/layouts';
 import { HeroBanner } from '@/widgets';
 import bannerImg from '@/assets/images/hero-banners/about.jpg'
-import { CheckoutFake } from '@/features/checkout/components/CheckoutFake';
 
 const Checkout: React.FC = () => {
 	return (
