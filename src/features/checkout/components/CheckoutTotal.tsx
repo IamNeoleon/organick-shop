@@ -5,6 +5,7 @@ import { DISCOUNTS_CODES } from '@/shared/constants';
 import { calculateCartTotal } from '@/utils';
 import classNames from 'classnames';
 import { LockKeyhole } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 
 export const CheckoutTotal: React.FC = () => {
@@ -94,7 +95,9 @@ export const CheckoutTotal: React.FC = () => {
 					<span className='font-medium'>${total}</span>
 				</div>
 			</div>
-			<button className='hover:brightness-75 transition py-5 bg-primary text-white w-full rounded-xl text-lg font-bold'>Pay Now</button>
+			<Link to='payment'>
+				<button className='hover:brightness-75 transition py-5 bg-primary text-white w-full rounded-xl text-lg font-bold'>Pay Now</button>
+			</Link>
 			<div className='mt-5'>
 				<div className='flex gap-3 items-center text-xl font-bold mb-2'><LockKeyhole color='#274c5b' />  <span>Secure Checkout - SSL Encrypted</span></div>
 				<div className='text'>

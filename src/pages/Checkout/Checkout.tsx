@@ -9,8 +9,7 @@ import { CheckoutFake } from '@/features/checkout/components/CheckoutFake';
 const Checkout: React.FC = () => {
 	return (
 		<>
-			<CheckoutFake />
-			{/* <PageWrapper>
+			<PageWrapper>
 				<HeroBanner text='Checkout' image={bannerImg} />
 				<div className='container pt-12 max-w-[1100px] pb-12'>
 					<div className='flex pt-5 gap-10 max-md:block'>
@@ -25,8 +24,7 @@ const Checkout: React.FC = () => {
 						</div>
 					</div>
 				</div>
-			</PageWrapper> */}
-
+			</PageWrapper>
 		</>
 	);
 };

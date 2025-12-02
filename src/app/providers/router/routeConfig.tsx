@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { RouteObject } from 'react-router-dom';
 import { MainLayout } from '@/shared/layouts';
 import PageLoader from '@/shared/ui/PageLoader/PageLoader';
+import { CheckoutFake } from '@/features/checkout/components/CheckoutFake';
 
 const Home = lazy(() => import('@/pages/Home/Home'));
 const About = lazy(() => import('@/pages/About/About'));
@@ -64,6 +65,12 @@ export const routes: RouteObject[] = [
                </Suspense>
             ),
          },
+         {
+            path: 'checkout/payment',
+            element: (
+               <CheckoutFake />
+            )
+         }
       ],
    },
 ];
