@@ -1,5 +1,5 @@
 import React from 'react';
-import { Intro, Promo, About, Products, Testimonials, Offer, PromoEco, Catalog, News } from './sections'
+import { Intro, Promo, About, Products, Testimonials, Offer, PromoEco, Catalog } from './sections'
 import { PageWrapper } from '@/shared/layouts';
 import { NewsletterBlock } from '@/widgets'
 import { Reveal } from '@/shared/ui';
@@ -29,9 +29,6 @@ const Home: React.FC = () => {
             </Reveal>
             <Reveal variant='up' delay={0.2}>
                <Catalog />
-            </Reveal>
-            <Reveal variant='up' delay={0.2}>
-               <News />
             </Reveal>
             <NewsletterBlock />
          </PageWrapper>

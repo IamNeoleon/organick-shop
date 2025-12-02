@@ -10,6 +10,7 @@ const Shop = lazy(() => import('@/pages/Shop/Shop'));
 const ProductPage = lazy(() => import('@/pages/ProductPage/ProductPage'));
 const Cart = lazy(() => import('@/pages/Cart/Cart'));
 const Checkout = lazy(() => import('@/pages/Checkout/Checkout'));
+const NotFound = lazy(() => import('@/pages/NotFound/NotFound'));
 
 
 export const routes: RouteObject[] = [
@@ -69,6 +70,14 @@ export const routes: RouteObject[] = [
             path: 'checkout/payment',
             element: (
                <CheckoutFake />
+            )
+         },
+         {
+            path: '*',
+            element: (
+               <Suspense fallback={<PageLoader />}>
+                  <NotFound />
+               </Suspense>
             )
          }
       ],
